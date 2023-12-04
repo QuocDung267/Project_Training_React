@@ -4,16 +4,18 @@ import MainLayouts from '../layouts/MainLayouts'
 import { useRoutes } from 'react-router-dom'
 import Reducer from '../components/useReducer/useReducer'
 import TodoApp from '../components/todoAppUseReduce'
+import AppUseContext from '../components/appUseContext'
 
 const routes = [
     { path: '/', index: true, element: <GetNews /> },
     { path: '/usereducer', index: true, element: <Reducer /> },
     { path: '/todo-app-usereducer', index: true, element: <TodoApp /> },
+    { path: '/app-usecontext', index: true, element: <AppUseContext /> }
 
 ]
-const RootRoutes = () =>{
-    const wrapLayoutRoutes = routes.map((route)=>({
-        ...route, element:<MainLayouts>{route.element}</MainLayouts>
+const RootRoutes = () => {
+    const wrapLayoutRoutes = routes.map((route) => ({
+        ...route, element: <MainLayouts>{route.element}</MainLayouts>
     }))
     return useRoutes(wrapLayoutRoutes)
 }
