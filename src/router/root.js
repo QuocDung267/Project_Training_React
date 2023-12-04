@@ -3,7 +3,7 @@ import GetNews from '../components/getNew/GetNews'
 import MainLayouts from '../layouts/MainLayouts'
 import { useRoutes } from 'react-router-dom'
 import Reducer from '../components/useReducer/useReducer'
-import TodoApp from '../components/todoAppUseReduce/todoApp'
+import TodoApp from '../components/todoAppUseReduce'
 
 const routes = [
     { path: '/', index: true, element: <GetNews /> },
